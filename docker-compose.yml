@@ -1,0 +1,12 @@
+version: '3'
+services:
+  squid:
+    image: ghcr.io/pccsuite/pccproxy-tiny
+    volumes:
+      - type: bind
+        source: upstream.conf
+        target: /etc/tinyproxy/upstream.conf
+    ports:
+      - "8888:8888"
+    restart: unless-stopped
+    pull_policy: always
