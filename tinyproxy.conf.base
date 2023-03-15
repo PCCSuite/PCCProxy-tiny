@@ -202,6 +202,8 @@ Allow 127.0.0.1
 Allow ::1
 Allow 10.5.25.40
 Allow 10.5.25.192/26
+# in docker network
+Allow 172.16.0.0/12
 
 # BasicAuth: HTTP "Basic Authentication" for accessing the proxy.
 # If there are any entries specified, access is only granted for authenticated
